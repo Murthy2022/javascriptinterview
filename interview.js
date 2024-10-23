@@ -98,3 +98,104 @@ if(primeOrNot(11)){
 
 
 //Largest element in the nested array
+
+
+let arrays = [[333,31,23],[3,20,23],[9,6,88]]
+
+function findLargestElement(nestedArray) { 
+
+    console.log("Given array-")
+    console.log(arrays)
+
+var largest_final = arrays[0][0]
+//console.log("before For loop")
+for(let i=0 ; i<nestedArray.length;i++){
+    let largest = nestedArray[i][0]
+    //console.log("Before Starting largest"+largest)
+    for(let j=0 ; j<nestedArray[i].length;j++){
+     //   console.log("For loop")
+    if(largest < nestedArray[i][j+1]){
+        largest=nestedArray[i][j+1]
+       // console.log("if pass"+largest)
+    }
+}
+//console.log("Largest-final="+largest_final)
+//console.log("Largest="+largest)
+if(largest_final < largest){
+    largest_final = largest
+}
+//console.log("Highest up to now"+largest_final)
+}
+return largest_final;
+} 
+
+let max = findLargestElement(arrays)
+console.log("Here is the Max number in Nested Array-"+max)
+
+
+//fibonacci series
+
+let fibNum = 30
+
+function toGenerate(fibNum){
+
+let fibSeries = [0,1]
+var value = 0
+
+while(1){
+    value = fibSeries[fibSeries.length-1] + fibSeries[fibSeries.length-2]
+    if(value<fibNum){
+    fibSeries.push(value)
+    }
+    else
+    break;
+}
+console.log(fibSeries)
+}
+
+toGenerate(fibNum)
+
+// Convert to UpperCase
+
+let text = "murthy"
+console.log(text.toUpperCase())
+
+
+//Call Method
+
+
+let names = {
+    firstName : "Satya",
+    LastName : "Murthy",
+}
+
+
+let printFullName = function (city,state) {
+    console.log(this.firstName + " " + this.LastName + " from" + " " + city + " " + state)
+} 
+printFullName.call(names,"Hyderabad","Telengana");
+
+
+
+let names2 = {
+    firstName : "Sachin",
+    LastName : "Tendulkar",
+}
+
+//printFullName.call(names2)
+
+printFullName.apply(names2,["Mumbai","Maharastra"])
+
+
+let printname = printFullName.bind(names,"Eluru","AndhraPradesh");
+
+console.log(printname)
+printname()
+
+
+
+
+
+
+
+
