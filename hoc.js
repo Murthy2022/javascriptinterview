@@ -74,6 +74,20 @@ const ageFilterFirstNameReduce = users.reduce((acc,curr) => {
 
 console.log(ageFilterFirstNameReduce)
 
+const nums = [ 9 , 2 , 90 , 51 , 92]
+
+const sortedNum = nums.sort(
+    (a,b) => {
+        if(a>b)
+            return 1
+        else
+        return -1
+    }
+
+)
+
+console.log(sortedNum)
+
 
 
 
