@@ -88,7 +88,28 @@ const sortedNum = nums.sort(
 
 console.log(sortedNum)
 
+//Function currying using bind
+
+function multiply(x,y){
+    console.log(x*y)
+}
+
+const multiplybyTwo = multiply.bind(this,4)
+const multiplybyThree = multiply.bind(this,3)
+
+multiplybyTwo(5);
+multiplybyThree(5);
 
 
+//Function currying using clouser
+
+function multiply_1(x){
+    return function(y){
+       console.log(x*y)
+    }
+}
+
+let multiply_c = multiply_1(2)
+multiply_c(7);
 
 
