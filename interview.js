@@ -161,7 +161,7 @@ let text = "murthy"
 console.log(text.toUpperCase())
 
 
-//Call Method
+//Call ,Apply ,Bind Method
 
 
 let names = {
