@@ -112,4 +112,3 @@ function multiply_1(x){
 let multiply_c = multiply_1(2)
 multiply_c(7);
 
-
